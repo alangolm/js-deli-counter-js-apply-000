@@ -6,12 +6,19 @@ function takeANumber(line, name) {
     return (`Welcome, ${name}. You are number 1 in line.`);
   }
 }
+var number = 1;
+function takeANumberTwo(line, number) {
+  line.push(number);
+  return (`${number} is currently up.`);
+  number++;
+}
 
 function nowServing(line) {
   if (line.length === 0) {
     return ("There is nobody waiting to be served!");
-  }
+  } else {
   return (`Currently serving ${line.shift()}.`);
+  }
 }
 
 function currentLine(line) {
